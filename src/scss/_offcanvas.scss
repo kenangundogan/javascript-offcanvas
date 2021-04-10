@@ -19,29 +19,19 @@
     // POSITION
     &.top{
         justify-content: center; align-items: flex-start;
-        .offcanvas-wrapper{
-            transform: translate(0,-50px);
-        }
+        .offcanvas-wrapper{transform: translate(0,-50px);}
     }
     &.left{
         justify-content: flex-start;
-        .offcanvas-wrapper{
-            max-width: 300px;
-            transform: translate(-100%,0);
-        }
+        .offcanvas-wrapper{transform: translate(-100%,0);}
     }
     &.right{
         justify-content: flex-end;
-        .offcanvas-wrapper{
-            max-width: 300px;
-            transform: translate(100%,0);
-        }
+        .offcanvas-wrapper{transform: translate(100%,0);}
     }
     &.bottom{
         justify-content: center; align-items: flex-end;
-        .offcanvas-wrapper{
-            transform: translate(0,50px);
-        }
+        .offcanvas-wrapper{transform: translate(0,50px);}
     }
 
     // SIZE
