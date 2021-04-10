@@ -23,7 +23,7 @@ const Offcanvas = function () {
             let dataPostion = selector.offcanvasContainer.getAttribute("data-position");
             let dataSize = selector.offcanvasContainer.getAttribute("data-size");
             let dataTransition = selector.offcanvasContainer.getAttribute("data-transition");
-            if (dataPostion == "" || dataPostion == null) { dataPostion = "center"; }
+            if (dataPostion == "" || dataPostion == null) { dataPostion = "left"; }
             if (dataSize == "" || dataSize == null) { dataSize = "small"; }
             if (dataTransition == "" || dataTransition == null) { dataTransition = "300"; }
             options = {
