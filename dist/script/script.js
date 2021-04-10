@@ -33,11 +33,11 @@ const Offcanvas = function () {
                 dataSize,
                 dataTransition
             }
-            modalEventFunc(selector, options);
+            offcanvasEventFunc(selector, options);
         }
     }
 
-    function modalEventFunc(selector, options) {
+    function offcanvasEventFunc(selector, options) {
         selector.offcanvasButton.addEventListener("click", () => {
             selector.offcanvasContainer.classList.add("show", options.dataPostion, options.dataSize);
             setTimeout(() => {

@@ -4,62 +4,62 @@
  * Released under the MIT License
  */
 
-const Modal = function () {
-    const modalButtons = document.querySelectorAll(".modalBtn");
-    modalButtons.forEach(modalButton => {
-        const dataTarget = modalButton.getAttribute("data-target");
-        const modalContainer = document.querySelector(dataTarget);
+const Offcanvas = function () {
+    const offcanvasButtons = document.querySelectorAll(".offcanvasBtn");
+    offcanvasButtons.forEach(offcanvasButton => {
+        const dataTarget = offcanvasButton.getAttribute("data-target");
+        const offcanvasContainer = document.querySelector(dataTarget);
         const selector = {
-            modalButton,
-            modalContainer
+            offcanvasButton,
+            offcanvasContainer
         }
-        modalGetAttr(selector);
+        offcanvasGetAttr(selector);
     });
 
-    function modalGetAttr(selector) {
-        if (selector.modalContainer) {
-            const modalClose = selector.modalContainer.querySelector(".modal-close");
-            const modalWrapper = selector.modalContainer.querySelector(".modal-wrapper");
-            let dataPostion = selector.modalContainer.getAttribute("data-position");
-            let dataSize = selector.modalContainer.getAttribute("data-size");
-            let dataTransition = selector.modalContainer.getAttribute("data-transition");
+    function offcanvasGetAttr(selector) {
+        if (selector.offcanvasContainer) {
+            const offcanvasClose = selector.offcanvasContainer.querySelector(".offcanvas-close");
+            const offcanvasWrapper = selector.offcanvasContainer.querySelector(".offcanvas-wrapper");
+            let dataPostion = selector.offcanvasContainer.getAttribute("data-position");
+            let dataSize = selector.offcanvasContainer.getAttribute("data-size");
+            let dataTransition = selector.offcanvasContainer.getAttribute("data-transition");
             if (dataPostion == "" || dataPostion == null) { dataPostion = "center"; }
             if (dataSize == "" || dataSize == null) { dataSize = "small"; }
             if (dataTransition == "" || dataTransition == null) { dataTransition = "300"; }
             options = {
-                modalClose,
-                modalWrapper,
+                offcanvasClose,
+                offcanvasWrapper,
                 dataPostion,
                 dataSize,
                 dataTransition
             }
-            modalEventFunc(selector, options);
+            offcanvasEventFunc(selector, options);
         }
     }
 
-    function modalEventFunc(selector, options) {
-        selector.modalButton.addEventListener("click", () => {
-            selector.modalContainer.classList.add("show", options.dataPostion, options.dataSize);
+    function offcanvasEventFunc(selector, options) {
+        selector.offcanvasButton.addEventListener("click", () => {
+            selector.offcanvasContainer.classList.add("show", options.dataPostion, options.dataSize);
             setTimeout(() => {
-                options.modalWrapper.style.transition = `${options.dataTransition}ms`;
-                selector.modalContainer.classList.add("visible");
-                selector.modalContainer.classList.add("transform");
+                options.offcanvasWrapper.style.transition = `${options.dataTransition}ms`;
+                selector.offcanvasContainer.classList.add("visible");
+                selector.offcanvasContainer.classList.add("transform");
             }, 0);
-            modalCloseFunc(selector, options);
+            offcanvasCloseFunc(selector, options);
         });
     }
 
-    function modalCloseFunc(selector, options) {
-        if (options.modalClose) {
-            options.modalClose.addEventListener("click", () => {
-                selector.modalContainer.classList.remove("visible", "transform");
+    function offcanvasCloseFunc(selector, options) {
+        if (options.offcanvasClose) {
+            options.offcanvasClose.addEventListener("click", () => {
+                selector.offcanvasContainer.classList.remove("visible", "transform");
                 setTimeout(() => {
-                    selector.modalContainer.classList.remove(options.dataPostion, options.dataSize, "show");
-                    options.modalWrapper.style = "";
+                    selector.offcanvasContainer.classList.remove(options.dataPostion, options.dataSize, "show");
+                    options.offcanvasWrapper.style = "";
                 }, options.dataTransition);
             });
         }
     }
 }
 
-window.Modal = Modal;
+window.Offcanvas = Offcanvas;
