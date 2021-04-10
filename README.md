@@ -3,9 +3,9 @@ Javascript offcanvas - tiny and simple.
 
 ## Status
 [![JS gzip size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/script/script.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/script/script.js)
-[![JS Brotli size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/script/script.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/style/style.css)
+[![JS Brotli size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/script/script.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/script/script.js)
 [![CSS gzip size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/style/style.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/style/style.css)
-[![CSS Brotli size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/script/script.js?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/style/style.css)
+[![CSS Brotli size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/style/style.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/style/style.css)
 
 ## Options
 Option | Type | Default | Description | Example
@@ -15,6 +15,23 @@ data-position | string | left | special class can be added | [Example](https://k
 data-size | string | small | special class can be added | [Example](https://kenangundogan.github.io/javascript-offcanvas)
 data-transition | int | 300ms | opening and closing animation speed | [Example](https://kenangundogan.github.io/javascript-offcanvas)
 
+## Usage example
+### Script
+```javascript
+var offcanvas = new Offcanvas;
+```
+
+### View
+```html
+<button class="offcanvasBtn" data-target="#offcanvas-default">Default</button>
+
+<div class="offcanvas-container" id="offcanvas-default">
+    <div class="offcanvas-wrapper">
+        <i class="offcanvas-close"></i>
+        ...
+    </div>
+</div>
+```
 
 ## Copyright and license
 Designed and built by [Kenan Gündoğan](https://www.linkedin.com/in/kenangundogan/)
