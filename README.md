@@ -7,6 +7,8 @@ Javascript offcanvas - tiny and simple.
 [![CSS gzip size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/style/style.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/style/style.css)
 [![CSS Brotli size](https://img.badgesize.io/kenangundogan/javascript-offcanvas/main/dist/style/style.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/kenangundogan/javascript-offcanvas/blob/main/dist/style/style.css)
 
+![Javascript Offcanvas](https://raw.githubusercontent.com/kenangundogan/javascript-offcanvas/main/asset/javascript-offcanvas-cover.png)
+
 ## Options
 Option | Type | Default | Description | Example
 ------ | ---- | ------- | ----------- | -----------
