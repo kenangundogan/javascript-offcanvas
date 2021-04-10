@@ -46,22 +46,22 @@
 
     // SIZE
     &.small{
-        .modal-wrapper{max-width: 300px;}
+        .offcanvas-wrapper{max-width: 300px;}
     }
     &.medium{
-        .modal-wrapper{max-width: 600px;}
+        .offcanvas-wrapper{max-width: 600px;}
     }
     &.large{
-        .modal-wrapper{max-width: 1024px;}
+        .offcanvas-wrapper{max-width: 1024px;}
     }
     &.xlarge{
-        .modal-wrapper{max-width: 1280px;}
+        .offcanvas-wrapper{max-width: 1280px;}
     }
     &.full{
-        .modal-wrapper{max-width: 100%;}
+        .offcanvas-wrapper{max-width: 100%;}
     }
     &.fullscreen{
-        .modal-wrapper{
+        .offcanvas-wrapper{
             max-width: 100%; height: 100%;
         }
     }
