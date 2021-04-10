@@ -15,6 +15,23 @@ data-position | string | left | special class can be added | [Example](https://k
 data-size | string | small | special class can be added | [Example](https://kenangundogan.github.io/javascript-offcanvas)
 data-transition | int | 300ms | opening and closing animation speed | [Example](https://kenangundogan.github.io/javascript-offcanvas)
 
+## Usage example
+### Script
+```javascript
+var offcanvas = new Offcanvas;
+```
+
+### View
+```html
+<button class="offcanvasBtn" data-target="#offcanvas-default">Default</button>
+
+<div class="offcanvas-container" id="offcanvas-default">
+    <div class="offcanvas-wrapper">
+        <i class="offcanvas-close"></i>
+        ...
+    </div>
+</div>
+```
 
 ## Copyright and license
 Designed and built by [Kenan Gündoğan](https://www.linkedin.com/in/kenangundogan/)
