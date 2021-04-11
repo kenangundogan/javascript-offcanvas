@@ -25,9 +25,22 @@ var offcanvas = new Offcanvas;
 
 ### View
 ```html
-<button class="offcanvasBtn" data-target="#offcanvas-default">Default</button>
+<!-- Button trigger offcanvas -->
+<button 
+    class="offcanvasBtn"
+    data-target="#offcanvas-left"
+>
+Default
+</button>
 
-<div class="offcanvas-container" id="offcanvas-default">
+<!-- Offcanvas -->
+<div
+    class="offcanvas-container"
+    id="offcanvas-left"
+    data-position="left"
+    data-size="medium"
+    data-transition="300"
+    >
     <div class="offcanvas-wrapper">
         <i class="offcanvas-close"></i>
         ...
