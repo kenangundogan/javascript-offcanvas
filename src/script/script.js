@@ -45,20 +45,29 @@ const Offcanvas = function () {
                 selector.offcanvasContainer.classList.add("visible");
                 selector.offcanvasContainer.classList.add("transform");
             }, 0);
-            offcanvasCloseFunc(selector, options);
+            offcanvasCloseEventFunc(selector, options);
         });
     }
 
-    function offcanvasCloseFunc(selector, options) {
+    function offcanvasCloseEventFunc(selector, options) {
         if (options.offcanvasClose) {
             options.offcanvasClose.addEventListener("click", () => {
-                selector.offcanvasContainer.classList.remove("visible", "transform");
-                setTimeout(() => {
-                    selector.offcanvasContainer.classList.remove(options.dataPostion, options.dataSize, "show");
-                    options.offcanvasWrapper.style = "";
-                }, options.dataTransition);
+                offcanvasCloseFunc(selector, options);
+            });
+            window.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" || event.key === "Esc") {
+                    offcanvasCloseFunc(selector, options);
+                }
             });
         }
+    }
+
+    function offcanvasCloseFunc(selector, options) {
+        selector.offcanvasContainer.classList.remove("visible", "transform");
+        setTimeout(() => {
+            selector.offcanvasContainer.classList.remove(options.dataPostion, options.dataSize, "show");
+            options.offcanvasWrapper.style = "";
+        }, options.dataTransition);
     }
 }
 
